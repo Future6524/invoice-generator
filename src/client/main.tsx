@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, NavLink, Route, Routes } from "react-router";
 import { Clients } from "./pages/Clients";
 import { InvoiceDetail } from "./pages/InvoiceDetail";
 import { InvoiceList } from "./pages/InvoiceList";
+import { NewInvoice } from "./pages/NewInvoice";
 import "./styles.css";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/invoices" replace />} />
           <Route path="/invoices" element={<InvoiceList />} />
+          <Route path="/invoices/new" element={<NewInvoice />} />
           <Route path="/invoices/:id" element={<InvoiceDetail />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="*" element={<p>Page not found.</p>} />
