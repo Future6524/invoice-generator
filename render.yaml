@@ -1,0 +1,16 @@
+# Render Blueprint: one free web service that runs the API and serves the React app.
+# SQLite lives on the service's disk, which Render wipes on every deploy and restart,
+# so the demo starts again from the sample data each time.
+services:
+  - type: web
+    name: invoice-generator
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/business
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: SEED_DEMO_DATA
+        value: "true"
