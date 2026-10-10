@@ -2,6 +2,8 @@
 
 A small web app for freelancers and small businesses: save your clients, build an invoice line by line with totals and tax worked out for you, and download it as a PDF.
 
+**Live demo: https://invoice-generator-8ucq.onrender.com**. It runs on a free plan, so the first page load after a quiet spell can take up to a minute. The demo resets to its example data whenever it restarts.
+
 ![Creating an invoice: three line items with a 6% tax rate and the total calculated live](docs/new-invoice.png)
 
 ## What it does
