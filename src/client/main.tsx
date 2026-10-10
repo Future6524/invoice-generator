@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Navigate, NavLink, Route, Routes } from "react-router";
 import { Clients } from "./pages/Clients";
+import { InvoiceDetail } from "./pages/InvoiceDetail";
 import { InvoiceList } from "./pages/InvoiceList";
 import "./styles.css";
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/invoices" replace />} />
           <Route path="/invoices" element={<InvoiceList />} />
+          <Route path="/invoices/:id" element={<InvoiceDetail />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="*" element={<p>Page not found.</p>} />
         </Routes>
